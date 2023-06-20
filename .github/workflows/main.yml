@@ -21,7 +21,7 @@ jobs:
                cd build
                cmake ../llvm -DCMAKE_SYSTEM_NAME=arm-linux-gnueabi -DCMAKE_INSTALL_PREFIX=/system -DLLVM_HOST_TRIPLE=arm-linux-gnueabi
                make -j128
-               tar -c * | gzip -9 > llvm-sysroot.tar.gz
+               "tar -c * | gzip -9 > llvm-sysroot.tar.gz"
        - uses: "marvinpinto/action-automatic-releases@latest"
            with:
              repo_token: "${{ secrets.GITHUB_TOKEN }}"
