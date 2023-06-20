@@ -12,8 +12,9 @@ jobs:
 
       steps:
        - uses: actions/checkout@v3
-       - run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-7`" >> $GITHUB_ENV
-       - run: exec ./main.sh
+       - run: |
+              echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-7`" >> $GITHUB_ENV
+              exec ./main.sh
        - uses: "marvinpinto/action-automatic-releases@latest"
            with:
              repo_token: "${{ secrets.GITHUB_TOKEN }}"
