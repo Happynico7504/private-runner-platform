@@ -12,6 +12,7 @@ jobs:
     steps:
         - uses: "actions/checkout@v2"
         - run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-7`" >> $GITHUB_ENV
+        - run: chmod 777 main.sh
         - run: ./main.sh
         - uses: "marvinpinto/action-automatic-releases@latest"
           with:
