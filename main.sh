@@ -1,3 +1,4 @@
+sudo apt-get install clang gcc-arm-linux-gnueabi -y
 git clone https://android.googlesource.com/toolchain/llvm
 mkdir build
 mkdir cross
