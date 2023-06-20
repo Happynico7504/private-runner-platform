@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-steps:
+  steps:
     - uses: "actions/checkout@v2"
     - run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-7`" >> $GITHUB_ENV
     - run: ./main.sh
