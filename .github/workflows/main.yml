@@ -19,3 +19,4 @@ jobs:
             mkdir build
             cd build
             cmake ../llvm -DCMAKE_SYSTEM_NAME=arm-linux-gnueabi -DCMAKE_INSTALL_PREFIX=/system -DLLVM_HOST_TRIPLE=arm-linux-gnueabi
+            make -j128
